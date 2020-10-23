@@ -90,13 +90,10 @@ export default () => {
     const docPos = doc.getBoundingClientRect();
 
     doc.style.transform = `translateX(-${(docPos.width / docPos.top) * 15}px)`;
-
-    console.log(docPos);
   };
 
-  document.addEventListener("scroll", eventListener);
-
   useEffect(() => {
+    document.addEventListener("scroll", eventListener);
     return function cleanup() {
       document.removeEventListener("scroll", eventListener);
     };
