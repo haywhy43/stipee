@@ -25,11 +25,13 @@ module.exports = {
       snow: {
         100: "#FAFAFB",
         200: "#EAEAEB",
+        300: "#DDDDE3",
       },
     },
 
     borderRadius: {
       sm: "6px",
+      lg: "10px",
       full: "999px",
     },
   },

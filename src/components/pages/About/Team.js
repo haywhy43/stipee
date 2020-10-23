@@ -82,7 +82,7 @@ export default () => {
 
   return (
     <StyledSection intersecting={intersecting} id="team">
-      <h3 className="animated text-center text-4xl font-semibold text-font opacity-0">
+      <h3 className="animated text-center text-3xl md:text-4xl font-semibold text-font opacity-0">
         Meet the team
       </h3>
 
