@@ -6,7 +6,7 @@ const StyledContainer = styled.div`
   overflow: hidden;
 
   .background {
-    height: 100vh;
+    height: ${props => (props.alternate ? "100%" : "100vh")};
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
     position: relative;
@@ -21,12 +21,13 @@ const StyledContainer = styled.div`
     position: absolute;
     top: 0;
     right: 0;
+    display: ${props => (props.alternate ? "none" : "block")};
   }
 
   .orange {
     position: absolute;
     bottom: 0;
-    right: 5%;
+    right: ${props => (props.alternate ? "0" : "5%")};
   }
 
   .blue {
@@ -36,9 +37,9 @@ const StyledContainer = styled.div`
   }
 `;
 
-export default function PageHeader({ children }) {
+export default function PageHeader({ children, alternate }) {
   return (
-    <StyledContainer>
+    <StyledContainer alternate={alternate}>
       <div className="background">{children}</div>
       <div className="blue animated zoomInOut infinite slower">
         <img
