@@ -19,6 +19,11 @@ module.exports = {
       },
 
       white: "#FFFFFF",
+
+      snow: {
+        100: "#FAFAFB",
+        200: "#EAEAEB",
+      },
     },
 
     borderRadius: {

@@ -14,6 +14,7 @@ const StyledButton = styled.button`
   height: 40px;
   transition: 500ms;
   font-weight: 500;
+  color: ${props => (props.textColor ? props.textColor : "")};
 
   &:hover {
     background-color: ${props => (props.hoverColor ? props.hoverColor : "")};
@@ -30,6 +31,7 @@ export default function Button({
   text,
   iconClass = "",
   hoverTextColor,
+  textColor,
 }) {
   return (
     <StyledButton
@@ -38,6 +40,7 @@ export default function Button({
       hoverColor={hoverColor}
       hoverTextColor={hoverTextColor}
       type={type || "button"}
+      textColor={textColor}
     >
       {!icon ? (
         <span className="mx-10">{text}</span>

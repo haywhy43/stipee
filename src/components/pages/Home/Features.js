@@ -131,7 +131,7 @@ export default () => {
             ))}
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 pb-8" id="stipee">
+        <div className="absolute bottom-0 left-0 pb-8 duration-500" id="stipee">
           <div className="hidden lg:block">
             <Stipee />
           </div>
