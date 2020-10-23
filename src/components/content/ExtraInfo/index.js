@@ -8,13 +8,17 @@ import Button from "../../UI/button";
 const StyledContainer = styled.div`
   height: 320px;
 
+  @media (max-width: 640px) {
+    height: auto;
+  }
+
   .cross-container {
     position: absolute;
     right: 5%;
     top: -35%;
 
-    @media(max-width: 640px){
-      top: -60%;
+    @media (max-width: 640px) {
+      top: -20%;
     }
   }
 `;
@@ -90,10 +94,7 @@ export default () => {
             <StyledCard className="py-6 px-8 col-span-1">
               <div className="bg-snow-200 h-16 w-16 rounded-full flex items-center justify-center">
                 <div className="w-8">
-                  <Img
-                    fluid={data.man.childImageSharp.fluid}
-                    alt={"teacher"}
-                  />
+                  <Img fluid={data.man.childImageSharp.fluid} alt={"teacher"} />
                 </div>
               </div>
               <p className="text-base text-font-sub mt-3">
@@ -113,6 +114,7 @@ export default () => {
           </div>
         </div>
       </StyledContainer>
+      <div className="md:h-24"></div>
     </div>
   );
 };

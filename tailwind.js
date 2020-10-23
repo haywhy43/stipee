@@ -20,6 +20,8 @@ module.exports = {
 
       white: "#FFFFFF",
 
+      abstract: "#E7E7E8",
+
       snow: {
         100: "#FAFAFB",
         200: "#EAEAEB",
