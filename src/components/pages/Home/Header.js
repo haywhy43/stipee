@@ -6,7 +6,7 @@ import Img from "gatsby-image";
 import Button from "../../UI/button";
 import SpiralArrow from "../../SVG/spiral-arrow.js";
 
-const Container = styled.header`
+const Container = styled.div`
   h1 {
     font-size: 39px;
     line-height: 52px;
