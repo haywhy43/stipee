@@ -7,7 +7,7 @@ import Button from "./UI/button";
 const navItems = [
   {
     text: "How it works",
-    link: "how-it-works",
+    link: "/how-it-works",
   },
   {
     text: "About us",
@@ -66,10 +66,10 @@ export default function Header() {
       <div className="w-11/12 mx-auto h-full main-wrapper flex items-center justify-between">
         <div className="flex items-center logo-wrapper justify-between">
           <Logo />
-          <button className="grid gap-1" onClick={() => setNavOpen(!navOpen)}>
-            <div className="rounded-full w-8 stroke"></div>
-            <div className="rounded-full w-8 stroke"></div>
-            <div className="rounded-full w-8 stroke"></div>
+          <button className="grid" onClick={() => setNavOpen(!navOpen)}>
+            <div className="rounded-full w-6 stroke"></div>
+            <div className="rounded-full w-6 stroke my-1"></div>
+            <div className="rounded-full w-6 stroke"></div>
           </button>
         </div>
         <StyledNav isOpen={navOpen}>
