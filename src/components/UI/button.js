@@ -7,14 +7,18 @@ const StyledButton = styled.button`
     props.borderColor ? `1px solid ${props.borderColor}` : "transparent"};
 
   background-color: ${props =>
-    props.backgroundColor
-      ? `theme('colors.${props.backgroundColor})`
-      : "transparent"};
+    props.backgroundColor ? props.backgroundColor : "transparent"};
 
   font-size: 13px;
-  font-weight: 500;
   border-radius: 6px;
-  height: 38px;
+  height: 40px;
+  transition: 500ms;
+  font-weight: 500;
+
+  &:hover {
+    background-color: ${props => (props.hoverColor ? props.hoverColor : "")};
+    color: ${props => (props.hoverTextColor ? props.hoverTextColor : "")};
+  }
 `;
 
 export default function Button({
@@ -25,12 +29,14 @@ export default function Button({
   hoverColor,
   text,
   iconClass = "",
+  hoverTextColor,
 }) {
   return (
     <StyledButton
       borderColor={borderColor}
       backgroundColor={backgroundColor}
       hoverColor={hoverColor}
+      hoverTextColor={hoverTextColor}
       type={type || "button"}
     >
       {!icon ? (

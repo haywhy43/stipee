@@ -3,6 +3,7 @@ import Header from "./header";
 
 import "../assets/styles/tailwind.css";
 import "../assets/styles/font.css";
+import "../assets/styles/animation.css";
 
 const Layout = ({ children }) => {
   return (

@@ -29,6 +29,7 @@ const navItems = [
 
 const StyledHeader = styled.header`
   box-shadow: 0px 1px 0px rgba(157, 168, 182, 0.2);
+  z-index: 999;
 
   @media (max-width: 800px) {
     height: auto;
@@ -73,7 +74,7 @@ export default function Header() {
         </div>
         <StyledNav isOpen={navOpen}>
           {navItems.map(item => (
-            <Link to={item.link} className="mr-8 text-sm text-font font-medium">
+            <Link to={item.link} key={item.text} className="mr-8 text-sm text-font font-medium">
               {item.text}
             </Link>
           ))}
