@@ -7,7 +7,9 @@ export default () => {
     <footer className="w-11/12 mx-auto px-6">
       <div className="md:flex justify-between">
         <div>
-          <Logo />
+          <Link to="/">
+            <Logo />
+          </Link>
           <p className="mt-5 text-font-sub">
             Stipee is a mobile solution that allows parents
             <br /> to fund, control, and protect their kid’s school
@@ -19,7 +21,7 @@ export default () => {
           <div className="col-span-1">
             <ul className="grid gap-3">
               <li className="text-font font-semibold text-">Contact</li>
-              <li className="text-font-sub">
+              <li className="text-font-sub hover:text-yellow duration-500ms">
                 <a href="mailto:Stipeeltd@gmail.com">Stipeeltd@gmail.com</a>
               </li>
             </ul>
@@ -27,16 +29,16 @@ export default () => {
           <div className="col-span-1">
             <ul className="grid gap-3">
               <li className="text-font font-semibold text-">About </li>
-              <li className="text-font-sub">
+              <li className="text-font-sub hover:text-yellow duration-500">
                 <Link to="/">Company </Link>
               </li>
-              <li className="text-font-sub">
+              <li className="text-font-sub hover:text-yellow duration-500">
                 <Link to="/">Blog </Link>
               </li>
-              <li className="text-font-sub">
+              <li className="text-font-sub hover:text-yellow duration-500">
                 <Link to="/">Career </Link>
               </li>
-              <li className="text-font-sub">
+              <li className="text-font-sub hover:text-yellow duration-500">
                 <Link to="/">Privacy &amp; Terms </Link>
               </li>
             </ul>
@@ -44,13 +46,13 @@ export default () => {
           <div className="col-span-1">
             <ul className="grid gap-3">
               <li className="text-font font-semibold text-">Support </li>
-              <li className="text-font-sub">
+              <li className="text-font-sub hover:text-yellow duration-500">
                 <Link to="/">Help centre </Link>
               </li>
-              <li className="text-font-sub">
+              <li className="text-font-sub hover:text-yellow duration-500">
                 <Link to="/">Contact us </Link>
               </li>
-              <li className="text-font-sub">
+              <li className="text-font-sub hover:text-yellow duration-500">
                 <Link to="/">FAQs </Link>
               </li>
             </ul>
@@ -58,16 +60,16 @@ export default () => {
           <div className="col-span-1">
             <ul className="grid gap-3">
               <li className="text-font font-semibold text-">Offerings </li>
-              <li className="text-font-sub">
+              <li className="text-font-sub hover:text-yellow duration-500">
                 <Link to="/">How it works </Link>
               </li>
-              <li className="text-font-sub">
+              <li className="text-font-sub hover:text-yellow duration-500">
                 <Link to="/">Contact sales </Link>
               </li>
-              <li className="text-font-sub">
+              <li className="text-font-sub hover:text-yellow duration-500">
                 <Link to="/">Rewards </Link>
               </li>
-              <li className="text-font-sub">
+              <li className="text-font-sub hover:text-yellow duration-500">
                 <Link to="/">Trainings </Link>
               </li>
             </ul>

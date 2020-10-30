@@ -65,7 +65,9 @@ export default function Header() {
     <StyledHeader className="h-16 bg-white fixed top-0 left-0 w-full">
       <div className="w-11/12 mx-auto h-full main-wrapper flex items-center justify-between">
         <div className="flex items-center logo-wrapper justify-between">
-          <Logo />
+          <Link to="/">
+            <Logo />
+          </Link>
           <button className="grid" onClick={() => setNavOpen(!navOpen)}>
             <div className="rounded-full w-6 stroke"></div>
             <div className="rounded-full w-6 stroke my-1"></div>
@@ -74,11 +76,15 @@ export default function Header() {
         </div>
         <StyledNav isOpen={navOpen}>
           {navItems.map(item => (
-            <Link to={item.link} key={item.text} className="mr-8 text-sm text-font font-medium">
+            <Link
+              to={item.link}
+              key={item.text}
+              className="mr-8 text-sm text-font font-medium"
+            >
               {item.text}
             </Link>
           ))}
-          <Link to="/" >
+          <Link to="/">
             <Button text="Let’s Talk" icon="chat" />
           </Link>
         </StyledNav>

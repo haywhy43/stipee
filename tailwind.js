@@ -13,6 +13,10 @@ module.exports = {
         sub: "#7A7A7A",
       },
 
+      yellow: {
+        default: "#FAAA31",
+      },
+
       blue: {
         dark: "#051C4C",
         faded: "#1C315E",

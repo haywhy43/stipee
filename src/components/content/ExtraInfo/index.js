@@ -64,7 +64,7 @@ export default () => {
           <Cross />
         </div>
         <div className="w-11/12 mx-auto py-10 px-2 md:px-4 z-50">
-          <h3 className="text-font font-semibold text-3xl md:text-4xl">
+          <h3 className="text-font font-semibold text-3xl md:text-4xl oskari">
             See what’s next with Stipee
           </h3>
 
@@ -88,6 +88,9 @@ export default () => {
                   backgroundColor="#F4F4F6"
                   borderColor="#DDDDE3"
                   text="Contact sales"
+                  hoverTextColor="white"
+                  hoverColor="#FAAA31"
+                  hoverBorderColor="transparent"
                 />
               </div>
             </StyledCard>

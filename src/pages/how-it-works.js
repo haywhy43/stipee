@@ -28,7 +28,7 @@ export default function () {
         </div>
       </Item>
       <div className="relative md:h-16 w-full w-10/12 mx-auto">
-        <div className="absolute right-0 opacity-50 pr-64 bottom-0 hidden md:block">
+        <div className="absolute right-0 opacity-50 pr-64 bottom-0 hidden md:block animated blink slow infinite">
           <SpiralArrow width="120px" />
         </div>
       </div>

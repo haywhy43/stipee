@@ -8,8 +8,8 @@ import SpiralArrow from "../../SVG/spiral-arrow.js";
 
 const Container = styled.div`
   h1 {
-    font-size: 39px;
-    line-height: 52px;
+    font-size: 44px;
+    line-height: 56px;
 
     @media (max-width: 640px) {
       font-size: 34px;
@@ -54,7 +54,7 @@ export default () => {
           <div className="md:w-11/12 lg:w-11/12 xl:w-8/12">
             <div className="relative w-11/12 md:w-10/12 mx-auto">
               <div className="">
-                <h1 className="text-font font-semibold relative z-50 animated fadeInUp">
+                <h1 className="text-font font-medium relative z-50 animated fadeInUp oskari">
                   Stipee is a mobile solution that allows parents to fund,
                   control, and protect their kid’s school stipends
                 </h1>
@@ -70,7 +70,7 @@ export default () => {
                   <div className="animated fadeInUp delay-200ms z-50 mt-5 md:mt-0">
                     <Button icon="arrow-right" text="How it works" />
                   </div>
-                  <div className="absolute top-0 md:flex pt-4 animated fadeIn delay-500ms hidden">
+                  <div className="absolute top-0 md:flex pt-4 animated blink infinite slow delay-500ms hidden">
                     <div className="w-64"></div>
                     <div className="w-2"></div>
                     <div className="pl-24 pt-40 lg:pt-24">
@@ -84,7 +84,7 @@ export default () => {
 
               <div className="h-12 md:h-40"></div>
               <div className="md:flex items-center my-10">
-                <p className="font-semibold text-s">Trusted By:</p>
+                <p className="font-medium text-lg oskari">Trusted By:</p>
                 <div className="flex ml-0 mt-3 md:mt-0 md:ml-5 items-center">
                   <div className="w-40">
                     <Img fluid={data.flutterwave.childImageSharp.fluid} />

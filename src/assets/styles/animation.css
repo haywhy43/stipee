@@ -170,6 +170,21 @@ Add your own GENERIC animations (that you think will be needed by others) here, 
   }
 }
 
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.blink {
+  animation-name: blink;
+}
+
 .zoomInOut {
   animation-name: zoomInOut;
 }

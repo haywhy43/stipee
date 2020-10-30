@@ -47,6 +47,17 @@
   src: url("../fonts/Graphik/Graphik-Bold.otf");
 }
 
+@font-face {
+  font-family: "Oskari G2";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/OskariG2.otf");
+}
+
+.oskari {
+  font-family: "Oskari G2";
+}
+
 body {
   font-family: "Graphik" !important;
 }

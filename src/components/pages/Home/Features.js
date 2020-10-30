@@ -20,6 +20,13 @@ const StyledCard = styled.div`
   }
 `;
 
+const StyledHeaderText = styled.h3`
+  @media (min-width: 641px) {
+    font-size: 44px;
+    line-height: 55px;
+  }
+`;
+
 const features = [
   {
     img: "smiley",
@@ -103,9 +110,9 @@ export default () => {
     <section>
       <div className="lg:flex w-11/12 md:w-10/12 lg:w-11/12 px-2 md:px-4 mx-auto relative">
         <div className="xl:w-6/12 w-8/12">
-          <h3 className="text-3xl md:text-4xl text-font font-semibold">
+          <StyledHeaderText className="text-3xl text-font font-medium oskari">
             Some of our <br /> features
-          </h3>
+          </StyledHeaderText>
           <div className="mt-4">
             <Button text="Learn more" icon="arrow-right" />
           </div>
@@ -120,7 +127,7 @@ export default () => {
                     alt={feat.alt}
                   />
                 </div>
-                <h4 className="text-base font-semibold text-font mt-5">
+                <h4 className="text-xl font-medium text-font mt-5 oskari">
                   {feat.title}
                 </h4>
                 <p className="text-base text-font-sub mt-3">{feat.body}</p>

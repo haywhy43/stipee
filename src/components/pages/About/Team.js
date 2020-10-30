@@ -31,6 +31,12 @@ const StyledSection = styled.section`
   }
 `;
 
+const StyledHeaderText = styled.h3`
+  @media (min-width: 641px) {
+    font-size: 44px;
+  }
+`;
+
 export default () => {
   const data = useStaticQuery(graphql`
     query {
@@ -82,9 +88,9 @@ export default () => {
 
   return (
     <StyledSection intersecting={intersecting} id="team">
-      <h3 className="animated text-center text-3xl md:text-4xl font-semibold text-font opacity-0">
+      <StyledHeaderText className="animated text-center text-3xl oskari font-medium text-font opacity-0">
         Meet the team
-      </h3>
+      </StyledHeaderText>
 
       <div className="w-10/12 lg:w-8/12 xl:w-6/12 mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10 mt-6">
         <div className="col-span-1 animated members opacity-0">

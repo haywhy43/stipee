@@ -8,6 +8,12 @@ const StyledParagraph = styled.p`
   animation-name: ${props => (props.animate ? "fadeInUp" : "")};
 `;
 
+const StyledHeaderText = styled.h2`
+  @media (min-width: 641px) {
+    font-size: 45px;
+  }
+`;
+
 export default () => {
   const [intersecting, setIntersecting] = useState(false);
 
@@ -39,9 +45,9 @@ export default () => {
           <div className="absolute">
             <Stones animate={intersecting} />
           </div>
-          <h2 className="text-3xl md:text-4xl text-font font-semibold pt-3 pl-6 md:pl-12">
+          <StyledHeaderText className="text-3xl text-font font-medium pt-3 pl-6 md:pl-12 oskari">
             What can Stipee do?
-          </h2>
+          </StyledHeaderText>
         </div>
         <div className="lg:w-1/2 mt-6 lg:mt-0 pl-6 md:pl-12 lg:pl-0">
           <StyledParagraph

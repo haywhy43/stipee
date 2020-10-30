@@ -3,6 +3,12 @@ import Img from "gatsby-image";
 import { graphql, useStaticQuery } from "gatsby";
 import styled from "styled-components";
 
+const StyledHeaderText = styled.h4`
+  @media (min-width: 641px) {
+    font-size: 44px;
+  }
+`;
+
 const StyledContainer = styled.div`
   display: flex;
   flex-direction: ${props => (props.alter ? "row-reverse" : "row")};
@@ -98,9 +104,9 @@ export default ({ alternate, children, number, text }) => {
     >
       <div className="relative md:w-1/2 w-full">
         <div className="absolute h-full items-center flex pl-16 w-full z-50">
-          <h4 className="text-font font-semibold text-3xl md:text-4xl animated opacity-0">
+          <StyledHeaderText className="text-font font-medium text-3xl animated opacity-0 oskari">
             {text}
-          </h4>
+          </StyledHeaderText>
         </div>
         <div className="w-32 md:w-40 xl:w-48">
           <Img fluid={data[number].childImageSharp.fluid} alt={number} />

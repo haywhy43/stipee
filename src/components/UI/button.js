@@ -19,6 +19,8 @@ const StyledButton = styled.button`
   &:hover {
     background-color: ${props => (props.hoverColor ? props.hoverColor : "")};
     color: ${props => (props.hoverTextColor ? props.hoverTextColor : "")};
+    border-color: ${props =>
+      props.hoverBorderColor ? props.hoverBorderColor : ""};
   }
 `;
 
@@ -32,6 +34,7 @@ export default function Button({
   iconClass = "",
   hoverTextColor,
   textColor,
+  hoverBorderColor,
 }) {
   return (
     <StyledButton
@@ -39,6 +42,7 @@ export default function Button({
       backgroundColor={backgroundColor}
       hoverColor={hoverColor}
       hoverTextColor={hoverTextColor}
+      hoverBorderColor={hoverBorderColor}
       type={type || "button"}
       textColor={textColor}
     >
