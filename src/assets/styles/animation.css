@@ -181,6 +181,40 @@ Add your own GENERIC animations (that you think will be needed by others) here, 
   }
 }
 
+@keyframes bounce {
+  0%,
+  60%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  40%,
+  80% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes bounceLeft {
+  0%,
+  60%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  40%,
+  80% {
+    transform: translateX(5px);
+  }
+}
+
+.bounceLeft {
+  animation-name: bounceLeft;
+}
+
+.bounce {
+  animation-name: bounce;
+}
+
 .blink {
   animation-name: blink;
 }
@@ -216,4 +250,16 @@ Add your own GENERIC animations (that you think will be needed by others) here, 
 
 .fadeIn {
   animation-name: fadeIn;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: #ebebeb;
+  }
+  100% {
+    background-color: transparent;
+  }
 }

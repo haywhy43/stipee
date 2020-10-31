@@ -68,7 +68,11 @@ export default () => {
                     />
                   </div>
                   <div className="animated fadeInUp delay-200ms z-50 mt-5 md:mt-0">
-                    <Button icon="arrow-right" text="How it works" />
+                    <Button
+                      icon="arrow-right"
+                      text="How it works"
+                      animationType="bounceLeft"
+                    />
                   </div>
                   <div className="absolute top-0 md:flex pt-4 animated blink infinite slow delay-500ms hidden">
                     <div className="w-64"></div>

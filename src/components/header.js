@@ -48,6 +48,21 @@ const StyledHeader = styled.header`
       }
     }
   }
+
+  .link:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 6px;
+    width: 100%;
+    left: -100%;
+    transition: all ease 1s;
+    background-color: #faaa31;
+  }
+
+  .link:hover:before {
+    left: 0%;
+  }
 `;
 
 const StyledNav = styled.nav`
@@ -57,6 +72,9 @@ const StyledNav = styled.nav`
     margin-top: 20px;
     width: 100%;
   }
+
+  display: flex;
+  align-items: center;
 `;
 
 export default function Header() {
@@ -76,13 +94,14 @@ export default function Header() {
         </div>
         <StyledNav isOpen={navOpen}>
           {navItems.map(item => (
-            <Link
-              to={item.link}
+            <div
               key={item.text}
-              className="mr-8 text-sm text-font font-medium"
+              className="mr-8 text-sm text-font font-medium relative overflow-hidden"
             >
-              {item.text}
-            </Link>
+              <Link to={item.link} className="link">
+                {item.text}
+              </Link>
+            </div>
           ))}
           <Link to="/">
             <Button text="Let’s Talk" icon="chat" />

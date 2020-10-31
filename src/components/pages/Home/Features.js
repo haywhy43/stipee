@@ -10,6 +10,8 @@ const StyledCard = styled.div`
   border: 1px solid #dddde3;
   box-shadow: 0px 20px 30px 5px rgba(0, 0, 0, 0.03);
   border-radius: 10px;
+  position: relative;
+  overflow: hidden;
 
   p {
     line-height: 30px;
@@ -17,6 +19,23 @@ const StyledCard = styled.div`
     @media (max-width: 640px) {
       line-height: 26px;
     }
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 10%;
+    height: 100%;
+    transform: rotate(-45deg);
+    background-color: #ffffff;
+    opacity: 0.9;
+    transition: all ease 1s;
+  }
+
+  &:hover:before {
+    left: 150%;
   }
 `;
 
@@ -114,7 +133,11 @@ export default () => {
             Some of our <br /> features
           </StyledHeaderText>
           <div className="mt-4">
-            <Button text="Learn more" icon="arrow-right" />
+            <Button
+              text="Learn more"
+              icon="arrow-right"
+              animationType="bounceLeft"
+            />
           </div>
         </div>
         <div className="mt-8 lg:mt-0 z-50">
