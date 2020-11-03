@@ -108,8 +108,10 @@ export default ({ alternate, children, number, text }) => {
             {text}
           </StyledHeaderText>
         </div>
-        <div className="w-32 md:w-40 xl:w-48">
-          <Img fluid={data[number].childImageSharp.fluid} alt={number} />
+        <div className={text ? "" : "flex md:justify-center"}>
+          <div className="w-32 md:w-40 xl:w-48">
+            <Img fluid={data[number].childImageSharp.fluid} alt={number} />
+          </div>
         </div>
       </div>
 
