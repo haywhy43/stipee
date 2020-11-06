@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Cross from "../../SVG/cross";
 import Img from "gatsby-image";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery, navigate } from "gatsby";
 import Button from "../../UI/button";
 
 const StyledContainer = styled.div`
@@ -91,6 +91,7 @@ export default () => {
                   hoverTextColor="white"
                   hoverColor="#FAAA31"
                   hoverBorderColor="transparent"
+                  onClick={() => navigate("/contact")}
                 />
               </div>
             </StyledCard>
@@ -111,6 +112,7 @@ export default () => {
                   borderColor="#FAAA31"
                   text="Refer us"
                   textColor="white"
+                  onClick={() => navigate("/contact")}
                 />
               </div>
             </StyledCard>

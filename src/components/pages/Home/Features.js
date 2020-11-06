@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Button from "../../UI/button";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery, navigate } from "gatsby";
 import styled from "styled-components";
 import Img from "gatsby-image";
 import Stipee from "../../SVG/stipee";
@@ -137,6 +137,7 @@ export default () => {
               text="Learn more"
               icon="arrow-right"
               animationType="bounceLeft"
+              onClick={() => navigate("/learn-more")}
             />
           </div>
         </div>

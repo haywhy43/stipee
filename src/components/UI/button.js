@@ -62,6 +62,7 @@ export default function Button({
   textColor,
   hoverBorderColor,
   animationType,
+  onClick,
 }) {
   const [animated, setAnimated] = useState(false);
   return (
@@ -77,6 +78,7 @@ export default function Button({
       animated={animated}
       onMouseEnter={() => setAnimated(true)}
       onMouseLeave={() => setAnimated(false)}
+      onClick={onClick}
     >
       {!icon ? (
         <span className="mx-10">{text}</span>

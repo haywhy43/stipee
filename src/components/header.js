@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import Logo from "./SVG/logo";
-import { Link } from "gatsby";
+import { Link, navigate } from "gatsby";
 import Button from "./UI/button";
 
 const navItems = [
+  {
+    text: "Home",
+    link: "/",
+  },
   {
     text: "How it works",
     link: "/how-it-works",
@@ -14,12 +18,8 @@ const navItems = [
     link: "/about",
   },
   {
-    text: "Blog",
-    link: "/blog",
-  },
-  {
-    text: "Help Centre",
-    link: "/help",
+    text: "Learn More",
+    link: "/learn-more",
   },
   {
     text: "Contact us",
@@ -104,7 +104,11 @@ export default function Header() {
             </div>
           ))}
           <Link to="/">
-            <Button text="Let’s Talk" icon="chat" />
+            <Button
+              text="Let’s Talk"
+              icon="chat"
+              onClick={() => navigate("/contact")}
+            />
           </Link>
         </StyledNav>
       </div>

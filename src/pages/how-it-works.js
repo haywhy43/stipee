@@ -4,6 +4,7 @@ import Header from "../components/pages/HowItWorks/Header";
 import Item from "../components/pages/HowItWorks/Item";
 import Button from "../components/UI/button";
 import SpiralArrow from "../components/SVG/spiral-arrow";
+import { navigate } from "gatsby";
 
 export default function () {
   return (
@@ -23,6 +24,7 @@ export default function () {
               borderColor="#FAAA31"
               hoverColor="#FAAA31"
               hoverTextColor="white"
+              onClick={() => navigate("/contact")}
             />
           </div>
         </div>
@@ -77,6 +79,7 @@ export default function () {
                 borderColor="#FAAA31"
                 hoverColor="#FAAA31"
                 hoverTextColor="white"
+                onClick={() => navigate("/contact")}
               />
             </div>
             <div className="mt-3 lg:mt-0">
@@ -85,6 +88,7 @@ export default function () {
                 borderColor="#FAAA31"
                 hoverColor="#FAAA31"
                 hoverTextColor="white"
+                onClick={() => navigate("/contact")}
               />
             </div>
           </div>

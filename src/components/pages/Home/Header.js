@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import PageHeader from "../../content/PageHeader";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery, navigate } from "gatsby";
 import Img from "gatsby-image";
 import Button from "../../UI/button";
 import SpiralArrow from "../../SVG/spiral-arrow.js";
@@ -65,6 +65,7 @@ export default () => {
                       text="Contact sales"
                       hoverColor="#FAAA31"
                       hoverTextColor="white"
+                      onClick={() => navigate("/contact")}
                     />
                   </div>
                   <div className="animated fadeInUp delay-200ms z-50 mt-5 md:mt-0">
@@ -72,6 +73,7 @@ export default () => {
                       icon="arrow-right"
                       text="How it works"
                       animationType="bounceLeft"
+                      onClick={() => navigate("/how-it-works")}
                     />
                   </div>
                   <div className="absolute top-0 md:flex pt-4 animated blink infinite slow delay-500ms hidden">
