@@ -50,7 +50,7 @@ export default function () {
         </div>
       </Item>
       <div className="md:h-16"></div>
-      <Item number="three" text="Setup Stipee for school">
+      {/* <Item number="three" text="Setup Stipee for school">
         <div className="w-10/12 ">
           <p className="text-lg text-font-sub">
             On receiving a request from your school, we come to set up the
@@ -58,11 +58,10 @@ export default function () {
             merchants, and teachers on how to use it.
           </p>
         </div>
-      </Item>
+      </Item> */}
       <div className="md:h-16"></div>
       <Item
-        number="four"
-        alternate
+        number="three"
         text="Download the Stipee app from Play or App store"
       >
         <div className="w-10/12 ">
@@ -95,7 +94,7 @@ export default function () {
         </div>
       </Item>
       <div className="md:h-16"></div>
-      <Item number="five" text="Fund your kids wallet">
+      <Item number="four" alternate text="Fund your kids wallet">
         <div className="w-10/12 ">
           <p className="text-lg text-font-sub">
             After registering, parents fund their Stipee wallet with enough
@@ -106,7 +105,7 @@ export default function () {
         </div>
       </Item>
       <div className="md:h-16"></div>
-      <Item number="six" alternate text="Seamless & secured spending">
+      <Item number="five" text="Seamless & secured spending">
         <div className="w-10/12 ">
           <p className="text-lg text-font-sub">
             Now the child enjoys the power of seamless and secured spending at

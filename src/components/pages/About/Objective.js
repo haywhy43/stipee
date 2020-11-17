@@ -9,6 +9,11 @@ const StyledContainer = styled.div`
   }
 `;
 
+const StyledEllipseContainer = styled.div`
+  width: 850px;
+  transform: translateX(-20%);
+`;
+
 const StyledHeaderText = styled.h3`
   @media (min-width: 641px) {
     font-size: 44px;
@@ -46,9 +51,13 @@ export default () => {
         <br /> Stipee different?
       </StyledHeaderText>
 
-      <div className="lg:flex items-center -mt-24">
-        <div className="lg:w-2/5 ">
-          <Ellipses />
+      <div className="lg:flex items-center -mt-24 overflow-hidden">
+        <div className="lg:w-2/5">
+          <StyledEllipseContainer>
+            <div className="animated rotate ease-in both infinite slowest">
+              <Ellipses />
+            </div>
+          </StyledEllipseContainer>
         </div>
         <div className=" lg:w-3/5">
           <div className="w-11/12 md:w-10/12 xl:w-9/12 md:pr-3 mx-auto">

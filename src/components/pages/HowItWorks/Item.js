@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 const StyledHeaderText = styled.h4`
   @media (min-width: 641px) {
-    font-size: 44px;
+    font-size: 43px;
   }
 `;
 
@@ -102,16 +102,34 @@ export default ({ alternate, children, number, text }) => {
       className="mt-24 w-11/12 mx-auto"
       intersecting={intersecting}
     >
-      <div className="relative md:w-1/2 w-full">
-        <div className="absolute h-full items-center flex pl-16 w-full z-50">
-          <StyledHeaderText className="text-font font-medium text-3xl animated opacity-0 oskari">
-            {text}
-          </StyledHeaderText>
-        </div>
-        <div className={text ? "" : "flex md:justify-center"}>
-          <div className="w-32 md:w-40 xl:w-48">
+      <div
+        className={`relative md:w-1/2 w-full flex items-start ${
+          alternate && text ? "flex-row-reverse mr-16" : "justify-center"
+        }`}
+      >
+        <div className={text ? "" : "flex md:justify-center w-full"}>
+          <div
+            className={`${
+              text === "" || text === undefined
+                ? "w-32 md:40 xl:w-48 mx-auto"
+                : "w-32 md:w-16 xl:w-24"
+            }`}
+          >
             <Img fluid={data[number].childImageSharp.fluid} alt={number} />
           </div>
+        </div>
+        <div
+          className={`h-full items-center flex  ${
+            text ? "w-full pl-4" : ""
+          } z-50`}
+        >
+          <StyledHeaderText
+            className={`text-font font-medium text-3xl animated opacity-0 oskari  ${
+              alternate ? "text-right ml-auto mr-4 w-9/12" : "w-8/12"
+            }`}
+          >
+            {text}
+          </StyledHeaderText>
         </div>
       </div>
 

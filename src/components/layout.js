@@ -7,10 +7,10 @@ import "../assets/styles/tailwind.css";
 import "../assets/styles/font.css";
 import "../assets/styles/animation.css";
 
-const Layout = ({ children, alt }) => {
+const Layout = ({ children, alt, border }) => {
   return (
     <>
-      <Header />
+      <Header border={border} />
       {children}
       {!alt ? (
         <>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Logo from "./SVG/logo";
 import { Link, navigate } from "gatsby";
@@ -28,8 +28,9 @@ const navItems = [
 ];
 
 const StyledHeader = styled.header`
-  box-shadow: 0px 1px 0px rgba(157, 168, 182, 0.2);
   z-index: 999;
+  background: ${props => props.color};
+  box-shadow: ${props => (props.border ? props.border : "transparent")};
 
   @media (max-width: 800px) {
     height: auto;
@@ -77,41 +78,66 @@ const StyledNav = styled.nav`
   align-items: center;
 `;
 
-export default function Header() {
+export default function Header({ border }) {
   const [navOpen, setNavOpen] = useState(false);
+  const [color, setColor] = useState("transparent");
+
+  const handleScroll = () => {
+    const element = document.querySelector("#nav");
+    const elementPos = element.getBoundingClientRect().y;
+    if (elementPos < 0) {
+      setColor("white");
+    } else {
+      setColor("transparent");
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("scroll", handleScroll);
+
+    return function cleanup() {
+      document.removeEventListener("scroll", handleScroll);
+    };
+  });
   return (
-    <StyledHeader className="h-16 bg-white fixed top-0 left-0 w-full">
-      <div className="w-11/12 mx-auto h-full main-wrapper flex items-center justify-between">
-        <div className="flex items-center logo-wrapper justify-between">
-          <Link to="/">
-            <Logo />
-          </Link>
-          <button className="grid" onClick={() => setNavOpen(!navOpen)}>
-            <div className="rounded-full w-6 stroke"></div>
-            <div className="rounded-full w-6 stroke my-1"></div>
-            <div className="rounded-full w-6 stroke"></div>
-          </button>
+    <div id="nav">
+      <StyledHeader
+        className="h-16 bg-transparent fixed top-0 left-0 w-full"
+        border={border}
+        color={color}
+      >
+        <div className="w-11/12 mx-auto h-full main-wrapper flex items-center justify-between">
+          <div className="flex items-center logo-wrapper justify-between">
+            <Link to="/">
+              <Logo />
+            </Link>
+            <button className="grid" onClick={() => setNavOpen(!navOpen)}>
+              <div className="rounded-full w-6 stroke"></div>
+              <div className="rounded-full w-6 stroke my-1"></div>
+              <div className="rounded-full w-6 stroke"></div>
+            </button>
+          </div>
+          <StyledNav isOpen={navOpen}>
+            {navItems.map(item => (
+              <div
+                key={item.text}
+                className="mr-8 text-sm text-font font-medium relative overflow-hidden"
+              >
+                <Link to={item.link} className="link">
+                  {item.text}
+                </Link>
+              </div>
+            ))}
+            <Link to="/">
+              <Button
+                text="Let’s Talk"
+                icon="chat"
+                onClick={() => navigate("/contact")}
+              />
+            </Link>
+          </StyledNav>
         </div>
-        <StyledNav isOpen={navOpen}>
-          {navItems.map(item => (
-            <div
-              key={item.text}
-              className="mr-8 text-sm text-font font-medium relative overflow-hidden"
-            >
-              <Link to={item.link} className="link">
-                {item.text}
-              </Link>
-            </div>
-          ))}
-          <Link to="/">
-            <Button
-              text="Let’s Talk"
-              icon="chat"
-              onClick={() => navigate("/contact")}
-            />
-          </Link>
-        </StyledNav>
-      </div>
-    </StyledHeader>
+      </StyledHeader>
+    </div>
   );
 }

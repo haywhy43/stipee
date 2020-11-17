@@ -263,3 +263,29 @@ Add your own GENERIC animations (that you think will be needed by others) here, 
     background-color: transparent;
   }
 }
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate {
+  animation-name: rotate;
+}
+
+.animated.slowest {
+  animation-duration: 10s;
+}
+
+.animated.ease-in {
+  animation-timing-function: ease-in;
+}
+
+.animated.both {
+  animation-fill-mode: both;
+}
