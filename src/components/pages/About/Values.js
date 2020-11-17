@@ -48,7 +48,7 @@ export default () => {
     observeListeners();
   });
   return (
-    <StyledSection intersecting={intersecting} className="mt-32 mb-48" id="values">
+    <StyledSection intersecting={intersecting} className="mt-32 md:mb-48" id="values">
       <StyledHeaderText className="animated text-center text-3xl oskari font-mrdium text-font opacity-0">
         Our Value Statement
       </StyledHeaderText>

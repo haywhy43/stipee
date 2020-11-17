@@ -5,7 +5,7 @@ import { Link } from "gatsby";
 export default () => {
   return (
     <footer className="pt-10 border-t border-abstract">
-      <div className="w-11/12 mx-auto px-6 w-11/12">
+      <div className="w-11/12 mx-auto md:px-6">
         <div className="md:flex justify-between mx-auto px-6">
           <div>
             <Link to="/">
@@ -79,10 +79,10 @@ export default () => {
         </div>
 
         <div className="py-4 md:py-0 md:h-24 w-full border-t border-abstract md:flex items-center justify-between mt-8">
-          <p className="text-font">
+          <p className="text-font text-sm md:text-base">
             © Stipee Limited 2020, All Rights Reserved{" "}
           </p>
-          <p className="text-font">
+          <p className="text-font mt-2 md:mt-0 text-sm md:text-base">
             6 Cheche Developer Street,Ikeja Lagos Nigeria.
           </p>
         </div>

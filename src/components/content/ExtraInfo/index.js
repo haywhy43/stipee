@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Cross from "../../SVG/cross";
 import Img from "gatsby-image";
 import { graphql, useStaticQuery, navigate } from "gatsby";
 import Button from "../../UI/button";
@@ -60,9 +59,7 @@ export default () => {
   return (
     <div>
       <StyledContainer className="mt-20 bg-snow-100 relative">
-        <div className="cross-container ">
-          <Cross />
-        </div>
+        <div className="cross-container "></div>
         <div className="w-11/12 mx-auto py-10 px-2 md:px-4 z-50">
           <h3 className="text-font font-semibold text-3xl md:text-4xl oskari">
             See what’s next with Stipee

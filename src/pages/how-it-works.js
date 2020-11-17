@@ -11,7 +11,7 @@ export default function () {
     <Layout>
       <Header />
       <Item number="one" text="Setup Stipee for school">
-        <div className="w-10/12 ">
+        <div className="md:w-10/12 ">
           <p className="text-lg text-font-sub">
             On receiving a request from your school, we come to set up the
             Stipee solution in your school and teach the students, parents,
@@ -35,7 +35,7 @@ export default function () {
         </div>
       </div>
       <Item number="two" text="Issue Stipee card to students" alternate>
-        <div className="w-10/12 ">
+        <div className="md:w-10/12 ">
           <p className="text-lg text-font-sub">
             During the setup process, we will distribute the personalized Stipee
             card to every student in your school. Schools have two options to
@@ -64,7 +64,7 @@ export default function () {
         number="three"
         text="Download the Stipee app from Play or App store"
       >
-        <div className="w-10/12 ">
+        <div className="md:w-10/12 ">
           <p className="text-lg text-font-sub">
             We will guide parents on how to download the Stipee app from Play
             store for android users or App store for IOS users and register;
@@ -95,7 +95,7 @@ export default function () {
       </Item>
       <div className="md:h-16"></div>
       <Item number="four" alternate text="Fund your kids wallet">
-        <div className="w-10/12 ">
+        <div className="md:w-10/12 ">
           <p className="text-lg text-font-sub">
             After registering, parents fund their Stipee wallet with enough
             money to sustain their children throughout a term, session, or any
@@ -106,7 +106,7 @@ export default function () {
       </Item>
       <div className="md:h-16"></div>
       <Item number="five" text="Seamless & secured spending">
-        <div className="w-10/12 ">
+        <div className="md:w-10/12 ">
           <p className="text-lg text-font-sub">
             Now the child enjoys the power of seamless and secured spending at
             school using their personalized fingerprint, protected Stipee card.
@@ -118,7 +118,7 @@ export default function () {
           </p>
         </div>
       </Item>
-      <div className="h-48 w-full"></div>
+      <div className="h-16 w-full"></div>
     </Layout>
   );
 }

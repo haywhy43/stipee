@@ -7,6 +7,10 @@ const StyledHeaderText = styled.h4`
   @media (min-width: 641px) {
     font-size: 43px;
   }
+
+  @media (max-width:640px){
+    font-size: 28px;
+  }
 `;
 
 const StyledContainer = styled.div`
@@ -112,7 +116,7 @@ export default ({ alternate, children, number, text }) => {
             className={`${
               text === "" || text === undefined
                 ? "w-32 md:40 xl:w-48 mx-auto"
-                : "w-32 md:w-16 xl:w-24"
+                : "w-16 md:w-16 xl:w-24"
             }`}
           >
             <Img fluid={data[number].childImageSharp.fluid} alt={number} />
@@ -125,7 +129,7 @@ export default ({ alternate, children, number, text }) => {
         >
           <StyledHeaderText
             className={`text-font font-medium text-3xl animated opacity-0 oskari  ${
-              alternate ? "text-right ml-auto mr-4 w-9/12" : "w-8/12"
+              alternate ? "text-right ml-auto mr-4 w-9/12" : "md:w-8/12"
             }`}
           >
             {text}

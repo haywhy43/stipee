@@ -15,7 +15,7 @@ const Layout = ({ children, alt, border }) => {
       {!alt ? (
         <>
           <ExtraInfo />
-          <div className="border-t border-abstract w-full my-16"></div>
+          <div className="w-full my-16"></div>
         </>
       ) : null}
       <Footer />

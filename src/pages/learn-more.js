@@ -164,7 +164,7 @@ export default function () {
           </p>
         </div>
       </Item>
-      <div className="h-32 md:h-20"></div>
+      <div className="h-10 md:h-20"></div>
     </Layout>
   );
 }

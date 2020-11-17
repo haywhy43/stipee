@@ -165,7 +165,7 @@ export default () => {
           </div>
         </div>
       </div>
-      <div className="h-32 w-full"></div>
+      <div className="md:h-32 w-full"></div>
     </section>
   );
 };

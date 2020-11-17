@@ -9,6 +9,11 @@ const Container = styled.div`
   background-color: rgba(250, 170, 49, 0.05);
   height: 100vh;
 
+  @media (max-width: 640px) {
+    height: auto;
+    padding-top: 10rem;
+  }
+
   h1 {
     font-size: 44px;
     line-height: 56px;

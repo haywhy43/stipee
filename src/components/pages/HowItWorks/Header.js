@@ -12,11 +12,11 @@ export default () => {
   return (
     <PageHeader alternate>
       <div className="h-48 w-full"></div>
-      <div className="w-11/12 mx-auto flex justify-between relative z-50">
+      <div className="w-11/12 mx-auto md:flex justify-between relative z-50">
         <StyledHeaderText className="text-font font-medium text-3xl animated fadeInUp oskari">
           How it works
         </StyledHeaderText>
-        <h2 className="text-font md:text-lg w-11/12 ml-auto md:w-4/5 pl-12 lg:w-5/12 mt-4 animated fadeInUp delay-200ms">
+        <h2 className="text-font md:text-lg w-11/12 md:ml-auto md:w-4/5 md:pl-12 lg:w-5/12 mt-4 animated fadeInUp delay-200ms">
           Stipee Enterprises is a company pioneering the use of mobile
           technology to enable parents to fund, control, and protect their kid's
           school stipends. Our mission is to power all financial transactions in
