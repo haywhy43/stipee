@@ -128,12 +128,8 @@ export default function Header({ border }) {
                 </Link>
               </div>
             ))}
-            <Link to="/">
-              <Button
-                text="Let’s Talk"
-                icon="chat"
-                onClick={() => navigate("/contact")}
-              />
+            <Link to="/contact">
+              <Button text="Let’s Talk" icon="chat" />
             </Link>
           </StyledNav>
         </div>

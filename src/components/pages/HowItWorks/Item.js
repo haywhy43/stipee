@@ -8,7 +8,7 @@ const StyledHeaderText = styled.h4`
     font-size: 43px;
   }
 
-  @media (max-width:640px){
+  @media (max-width: 640px) {
     font-size: 28px;
   }
 `;
@@ -129,7 +129,7 @@ export default ({ alternate, children, number, text }) => {
         >
           <StyledHeaderText
             className={`text-font font-medium text-3xl animated opacity-0 oskari  ${
-              alternate ? "text-right ml-auto mr-4 w-9/12" : "md:w-8/12"
+              alternate ? "text-right ml-auto mr-4 w-9/12" : "w-8/12"
             }`}
           >
             {text}
