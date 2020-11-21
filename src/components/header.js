@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Logo from "./SVG/logo";
-import { Link, navigate } from "gatsby";
+import { Link } from "gatsby";
 import Button from "./UI/button";
 
 const navItems = [
