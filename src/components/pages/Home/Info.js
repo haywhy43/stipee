@@ -54,15 +54,15 @@ export default () => {
             animate={intersecting}
             className="w-11/12 md:w-10/12 md:text-lg text-font-sub animated opacity-0"
           >
-            Tempus ornare odio id pharetra, venenatis, sit quis in. Dui congue
-            fermentum duis nascetur maecenas faucibus diam. Nulla mattis nulla
-            accumsan libero. Adipiscing et faucibus in sit. Pretium, faucibus
-            massa ligula est sit orci placerat. Sagittis sit hendrerit nunc id
-            augue velit.
+            Stipee is an innovative technological product that exposes students
+            early to digital finance, instill the savings culture in them, and
+            improve the efficiency of schools.
             <br />
-            STIPEE eliminates the need for students to handle cash at school:
-            keeping their money safe yet readily available, & protecting them
-            from contracting COVID-19.
+            <span className="pt-3">
+              STIPEE eliminates the need for students to handle cash at school:
+              keeping their money safe yet readily available, & protecting them
+              from contracting COVID-19.
+            </span>
           </StyledParagraph>
         </div>
       </div>

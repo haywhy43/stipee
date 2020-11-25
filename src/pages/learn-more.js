@@ -71,11 +71,6 @@ export default function () {
             their kids' daily school stipend with ease and at a reduced cost.
             Parents fund their app using a debit card, bank account, internet
             banking, or USSD for a frictionless transaction.
-            <br />
-            <span className="mt-2">
-              Stipee eliminates having to remember often and apportion the money
-              enabling parents to pre-plan this expense.
-            </span>
           </p>
         </div>
       </Item>
@@ -143,16 +138,18 @@ export default function () {
             Merchant track daily sales
           </StyledHeaderText>
           <p className="text-sm md:text-lg text-font-sub mt-2">
-            Stipee merchants are not left out. We equip school merchants with
-            STIPEE POS terminal to receive payment, drastically cut payment
-            time, track sales, and run periodic sales reports.
+            Our customer representatives are ever-ready to serve you. We are
+            just a click away on all our platforms.
           </p>
         </div>
       </Item>
       <Item number="six">
         <div className="w-11/12">
           <div className="w-12">
-            <Img fluid={data.telephone.childImageSharp.fluid} alt="smiley face" />
+            <Img
+              fluid={data.telephone.childImageSharp.fluid}
+              alt="smiley face"
+            />
           </div>
           <StyledHeaderText className="oskari text-font font-medium mt-5 text-3xl">
             Merchant track daily sales
