@@ -17,10 +17,8 @@ export default () => {
           What we about
         </StyledHeaderText>
         <h2 className="text-font md:text-lg w-11/12 md:w-4/5 md:pl-12 lg:w-5/12 mt-4 animated fadeInUp delay-200ms">
-          Stipee Enterprises is a company pioneering the use of mobile
-          technology to enable parents to fund, control, and protect their kid's
-          school stipends. Our mission is to power all financial transactions in
-          schools.
+          Inspired by a mission to expose students early to digital finance &
+          instill the savings culture in them, we launched STIPEE.
         </h2>
       </div>
       <div className="h-32 md:h-56 w-full"></div>
