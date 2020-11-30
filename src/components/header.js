@@ -50,6 +50,10 @@ const StyledHeader = styled.header`
     }
   }
 
+  .link {
+    position: relative;
+  }
+
   .link:before {
     content: "";
     position: absolute;
@@ -111,7 +115,13 @@ export default function Header({ border }) {
             <Link to="/">
               <Logo />
             </Link>
-            <button className="grid" onClick={() => setNavOpen(!navOpen)}>
+            <button
+              className="grid"
+              onClick={() => {
+                setColor(navOpen ? "transparent" : "white");
+                setNavOpen(!navOpen);
+              }}
+            >
               <div className="rounded-full w-6 stroke"></div>
               <div className="rounded-full w-6 stroke my-1"></div>
               <div className="rounded-full w-6 stroke"></div>
